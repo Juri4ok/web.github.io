@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<TITLE>Hello from JavaScript!</TITLE>
+<script>
+  function hello() {
+    var result = window.confirm('Hello, world!?');
+    if (result) {}
+    document.write('Hello, world!');
+  }
+  function info(){
+    var result = prompt();
+    document.write(result);
+  }
+  function addNumbers() {
+     var num1 = parseFloat(document.getElementById('num1').value);
+     var num2 = parseFloat(document.getElementById('num2').value);
+     if (isNaN(num1) || isNaN(num2)) {
+       alert('Будь ласка, введіть дійсні числа.');
+     } else {
+       var sum = num1 + num2;
+       document.getElementById('result').innerHTML = 'Результат: ' + sum;
+     }
+   }
+  function bigger(){
+      var bnum1 = parseFloat(document.getElementById('bnum1').value);
+     var bnum2 = parseFloat(document.getElementById('bnum2').value);
+     if (isNaN(bnum1) || isNaN(bnum2)) {
+       alert('Будь ласка, введіть дійсні числа.');
+     } else if (bnum1 > bnum2) {
+       document.getElementById('bresult').innerHTML = 'Число 1 більше';
+     } else if (bnum1 < bnum2) {
+        document.getElementById('bresult').innerHTML = 'Число 2 більше';
+     } else{
+      document.getElementById('bresult').innerHTML = 'Числа рівні';
+     }
+  }
+   
+</script>
+</HEAD>
+<BODY BGCOLOR=white>
+<H1>JavaScript Test</H1>
+<HR>
+<A HREF="#" onClick="alert('Hello, world!'); ">3.1 Select mе!<br></А>
+<A HREF="#" onClick="document.write('Hello, world!');">3.2 Select mе!<br></А>
+<A HREF="#" onClick="hello()">3.3 Select mе!<br></А>
+<A HREF="#" onmouseover="info()">3.4, 3.5 Select mе!<br></A>
+<label>3.6</label>
+  <label for="num1">Число 1:</label>
+  <input type="text" id="num1"><br>
+  <label for="num2">Число 2:</label>
+  <input type="text" id="num2"><br>
+  <button onclick="addNumbers();">Склади</button>
+  <p id="result"></p>
+  <label for="bnum1">Число 1:</label>
+  <input type="text" id="bnum1"><br>
+  <label for="bnum2">Число 2:</label>
+  <input type="text" id="bnum2"><br>
+  <button onclick="bigger();">Знайти більше</button>
+  <p id="bresult"></p>
+</BODY>
+</HTML>
